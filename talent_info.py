@@ -6,7 +6,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [1, 2, 3]
+            "children": [1, 2, 3],
+            "parents": None
         },
         {
             "id": 1,
@@ -14,7 +15,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [4]
+            "children": [4],
+            "parents": [0]
         },
         {
             "id": 2,
@@ -22,7 +24,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [5]
+            "children": [5],
+            "parents": [0]
         },
         {
             "id": 3,
@@ -30,7 +33,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [6]
+            "children": [6],
+            "parents": [0]
         },
         {
             "id": 4,
@@ -38,7 +42,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [7, 8]
+            "children": [7, 8],
+            "parents": [1]
         },
         {
             "id": 5,
@@ -46,7 +51,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 0,
             "rank_max": 1,
-            "children": [8, 9]
+            "children": [8, 9],
+            "parents": [2]
         },
         {
             "id": 6,
@@ -54,7 +60,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [9, 10]
+            "children": [9, 10],
+            "parents": [3]
         },
         {
             "id": 7,
@@ -62,7 +69,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [4]
         },
         {
             "id": 8,
@@ -70,7 +78,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": [11, 12]
+            "children": [11, 12],
+            "parents": [4, 5]
         },
         {
             "id": 9,
@@ -78,7 +87,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 0,
             "rank_max": 1,
-            "children": [12, 13]
+            "children": [12, 13],
+            "parents": [5, 6]
         },
         {
             "id": 10,
@@ -86,7 +96,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 0,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [6]
         },
         {
             "id": 11,
@@ -94,7 +105,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [14, 15]
+            "children": [14, 15],
+            "parents": [4, 8]
         },
         {
             "id": 12,
@@ -102,7 +114,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [16]
+            "children": [16],
+            "parents": [8, 9]
         },
         {
             "id": 13,
@@ -110,7 +123,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [17, 18]
+            "children": [17, 18],
+            "parents": [6, 9]
         },
         {
             "id": 14,
@@ -118,7 +132,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [19, 20, 21]
+            "children": [19, 20, 21],
+            "parents": [11]
         },
         {
             "id": 15,
@@ -126,7 +141,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [21, 22]
+            "children": [21, 22],
+            "parents": [11]
         },
         {
             "id": 16,
@@ -134,7 +150,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 1,
             "rank_max": 1,
-            "children": [22]
+            "children": [22],
+            "parents": [12]
         },
         {
             "id": 17,
@@ -142,7 +159,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [22, 23]
+            "children": [22, 23],
+            "parents": [13]
         },
         {
             "id": 18,
@@ -150,7 +168,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 1,
             "rank_max": 1,
-            "children": [24, 23]
+            "children": [24, 23],
+            "parents": [13]
         },
         {
             "id": 19,
@@ -158,7 +177,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [29]
+            "children": [29],
+            "parents": [14]
         },
         {
             "id": 20,
@@ -166,7 +186,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [25]
+            "children": [25],
+            "parents": [14]
         },
         {
             "id": 21,
@@ -174,7 +195,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 2,
-            "children": [25, 26]
+            "children": [25, 26],
+            "parents": [14, 15]
         },
         {
             "id": 22,
@@ -182,7 +204,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 2,
-            "children": [27, 26]
+            "children": [27, 26],
+            "parents": [15, 16, 17]
         },
         {
             "id": 23,
@@ -190,7 +213,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 2,
-            "children": [27, 28]
+            "children": [27, 28],
+            "parents": [17, 18]
         },
         {
             "id": 24,
@@ -198,7 +222,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 1,
             "rank_max": 1,
-            "children": [28]
+            "children": [28],
+            "parents": [18]
         },
         {
             "id": 25,
@@ -206,7 +231,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 2,
             "rank_max": 1,
-            "children": [29, 30]
+            "children": [29, 30],
+            "parents": [19, 20, 21]
         },
         {
             "id": 26,
@@ -214,7 +240,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 2,
             "rank_max": 1,
-            "children": [30, 31, 32]
+            "children": [30, 31, 32],
+            "parents": [21, 22]
         },
         {
             "id": 27,
@@ -222,7 +249,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [32, 33, 34]
+            "children": [32, 33, 34],
+            "parents": [22, 23]
         },
         {
             "id": 28,
@@ -230,7 +258,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 2,
             "rank_max": 1,
-            "children": [34, 35, 36]
+            "children": [34, 35, 36],
+            "parents": [23, 24]
         },
         {
             "id": 29,
@@ -238,7 +267,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [37]
+            "children": [37],
+            "parents": [19, 25]
         },
         {
             "id": 30,
@@ -246,7 +276,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 2,
-            "children": [37, 38, 39]
+            "children": [37, 38, 39],
+            "parents": [25, 26]
         },
         {
             "id": 31,
@@ -254,7 +285,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [39]
+            "children": [39],
+            "parents": [26]
         },
         {
             "id": 32,
@@ -262,7 +294,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 2,
-            "children": [39, 40]
+            "children": [39, 40],
+            "parents": [26, 27]
         },
         {
             "id": 33,
@@ -270,7 +303,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [40]
+            "children": [40],
+            "parents": [27]
         },
         {
             "id": 34,
@@ -278,7 +312,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 2,
-            "children": [40, 41]
+            "children": [40, 41],
+            "parents": [27, 28]
         },
         {
             "id": 35,
@@ -286,7 +321,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [41]
+            "children": [41],
+            "parents": [28]
         },
         {
             "id": 36,
@@ -294,7 +330,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": [41]
+            "children": [41],
+            "parents": [28]
         },
         {
             "id": 37,
@@ -302,7 +339,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [29, 30]
         },
         {
             "id": 38,
@@ -310,7 +348,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [30]
         },
         {
             "id": 39,
@@ -318,7 +357,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [30, 31, 32]
         },
         {
             "id": 40,
@@ -326,7 +366,8 @@ raw_talents = {
             "secondary_name": False,
             "tier": 2,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [32, 33, 34]
         },
         {
             "id": 41,
@@ -334,7 +375,8 @@ raw_talents = {
             "secondary_name": True,
             "tier": 2,
             "rank_max": 1,
-            "children": None
+            "children": None,
+            "parents": [34, 35, 36]
         }
     ]
 }

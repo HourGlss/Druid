@@ -17,6 +17,11 @@ def build_tree(class_to_use):
         if talent_to_add['children'] is not None:
             for child in talent_to_add['children']:
                 current.add_child(talents[child])
+
+        if talent_to_add['parents'] is not None:
+            for parent in talent_to_add['parents']:
+                current.add_parent(talents[parent])
+
     test_tree = []
     for talent in talents:
         test_tree.append(pickle.dumps(talent))
@@ -48,31 +53,44 @@ def find_path(tree, talents_to_spend):
     else:
         return tree
 
-def print_tree(tree):
-    for e in tree:
+
+def print_tree(tree_to_use):
+    for e in tree_to_use:
         print(pickle.loads(e))
 
-def get_possible_next_talents(tree) -> list:
+
+def claim(tree_to_use, id):
+    deserialized = []
+    for e in tree_to_use:
+        deserialized.append(pickle.loads(e))
+    deserialized[id].claim()
+    return [pickle.dumps(_) for _ in deserialized]
+
+
+def get_possible_next_talents(tree_to_use) -> set:
     """
     THIS IS NOT FUNCTIONAL
-    :param tree:
+    :param tree_to_use:
     :return:
     """
-    possible_added_talents = []
+    possible_added_talents = set()
     deserialized_tree = []
-    for talent in tree:
+    for talent in tree_to_use:
         deserialized_tree.append(pickle.loads(talent))
     for talent in deserialized_tree:
-        if talent.rank == talent.rank_max:
-            for child in talent.children:
-                if deserialized_tree[child.id].rank < deserialized_tree[child.id].rank_max:
-                    if deserialized_tree[child.id].name not in possible_added_talents:
-                        possible_added_talents.append(deserialized_tree[child.id].id)
+        print(f"Testing {talent}")
+        if talent.open():
+            possible_added_talents.add(talent.id)
     return possible_added_talents
 
 
 if __name__ == '__main__':
-    tier1 = 8
-    tier2 = 20
     tree = build_tree("druid")
-    path = find_path(tree, 30)
+    # path = find_path(tree, 30)
+    print_tree(tree)
+    possibles = get_possible_next_talents(tree)
+    print(possibles)
+    print("="*50)
+    tree = claim(tree,0)
+    possibles = get_possible_next_talents(tree)
+    print(possibles)
