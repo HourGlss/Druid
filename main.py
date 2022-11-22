@@ -89,7 +89,7 @@ if __name__ == '__main__':
     # path = find_path(tree, 30)
     print_tree(tree)
     possibles = get_possible_next_talents(tree)
-    print(possibles)
+    # print(possibles)
     print("="*50)
     tree = claim(tree,0)
     possibles = get_possible_next_talents(tree)
