@@ -1,6 +1,8 @@
 from talent_info import raw_talents
 from talent import Talent
 import pickle
+
+
 def build_tree(class_to_use):
     talents = []
     for talent_to_add in raw_talents[class_to_use]:
@@ -15,11 +17,20 @@ def build_tree(class_to_use):
         if talent_to_add['children'] is not None:
             for child in talent_to_add['children']:
                 current.add_child(talents[child])
-    return talents
+    test_tree = []
+    for talent in talents:
+        test_tree.append(pickle.dumps(talent))
+    return test_tree
+
+
 def find_path(tree, talents_to_spend):
+    print(talents_to_spend)
+    print_tree(tree)
     if talents_to_spend != 0:
         possibles = get_possible_next_talents(tree)
+        print(possibles)
         for i in possibles:
+            print(i)
             new_talents_to_spend = talents_to_spend - 1
             # make a list to add deserialized talents
             new_talent_list = []
@@ -36,7 +47,17 @@ def find_path(tree, talents_to_spend):
             return find_path(new_talent_list, new_talents_to_spend)
     else:
         return tree
+
+def print_tree(tree):
+    for e in tree:
+        print(pickle.loads(e))
+
 def get_possible_next_talents(tree) -> list:
+    """
+    THIS IS NOT FUNCTIONAL
+    :param tree:
+    :return:
+    """
     possible_added_talents = []
     deserialized_tree = []
     for talent in tree:
@@ -48,12 +69,10 @@ def get_possible_next_talents(tree) -> list:
                     if deserialized_tree[child.id].name not in possible_added_talents:
                         possible_added_talents.append(deserialized_tree[child.id].id)
     return possible_added_talents
+
+
 if __name__ == '__main__':
     tier1 = 8
     tier2 = 20
-    head = build_tree("druid")
-    head[0].rank = 1
-    test_tree = []
-    for talent in head:
-        test_tree.append(pickle.dumps(talent))
-    path = find_path(test_tree, 30)
+    tree = build_tree("druid")
+    path = find_path(tree, 30)

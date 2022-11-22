@@ -14,4 +14,4 @@ class Talent:
         return str(self)
 
     def __str__(self):
-        return f"{self.id}\t{str(self.name):<50}"
+        return f"{self.id}\t{str(self.name):<50} ({self.rank}/{self.rank_max})"
